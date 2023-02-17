@@ -7,5 +7,6 @@ import lombok.Data;
 public class ListParm {
     private Long currentPage;
     private Long pageSize;
+    private Long collageId;
     private String collageName;
 }

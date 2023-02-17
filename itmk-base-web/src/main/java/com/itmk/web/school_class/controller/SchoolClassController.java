@@ -12,6 +12,7 @@ import com.itmk.web.school_class.service.SchoolClassService;
 import com.itmk.web.school_major.entity.SchoolMajor;
 import com.itmk.web.school_major.service.SchoolMajorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -52,7 +53,22 @@ public class SchoolClassController {
         return ResultUtils.success("查询成功", schoolClass);
     }
 
-
+    //    @DeleteMapping("/{classId}")
+//    public ResultVo delete(@PathVariable("classId") Long classId) {
+//        try {
+//            boolean b = schoolClassService.removeById(classId);
+//            if (b) {
+//                return ResultUtils.success("删除成功!");
+//            }
+//            return ResultUtils.success("删除失败!");
+//        } catch (DataIntegrityViolationException e) {
+//
+//            return ResultUtils.error("存在该班级的学生，无法删除");
+//        } catch (Exception e) {
+//
+//            return ResultUtils.error("服务器出错");
+//        }
+//    }
     //删除
     @DeleteMapping("/{classId}")
     public ResultVo delete(@PathVariable("classId") Long classId) {
@@ -62,6 +78,7 @@ public class SchoolClassController {
         }
         return ResultUtils.error("删除失败!");
     }
+
 
     //列表查询
     @GetMapping("/list")

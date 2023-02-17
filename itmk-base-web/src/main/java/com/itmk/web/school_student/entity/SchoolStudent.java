@@ -6,10 +6,12 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+
 
 @Data
 @TableName("school_student")
-public class SchoolStudent {
+public class SchoolStudent implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long stuId;
     private Long classId;
@@ -31,4 +33,5 @@ public class SchoolStudent {
     private String majorName;
     @TableField(exist = false)
     private String collageName;
+
 }

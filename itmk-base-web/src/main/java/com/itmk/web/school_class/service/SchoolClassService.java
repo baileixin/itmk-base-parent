@@ -16,4 +16,5 @@ public interface SchoolClassService extends IService<SchoolClass> {
 
     //分配宿舍，查询班级列表
     IPage<AssignClass> getAssignClass(AssignClassParm parm);
+
 }
