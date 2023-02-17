@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itmk.web.drom_repair.mapper.DromRepairMapper">
+    <!--    <select id="getRoomCode" resultType="com/itmk/web/drom_repair/entity/DromRepair">-->
+    <!--        SELECT sb.`stu_id`,-->
+    <!--               dr.`room_code`-->
+    <!--        FROM `drom_room_bed` AS drb-->
+    <!--                 JOIN `dorm_room` AS dr-->
+    <!--                      ON drb.`room_id` = dr.`room_id`-->
+    <!--                 JOIN `select_bed` AS sb-->
+    <!--                      ON drb.`bed_id` = sb.`bed_id`-->
+    <!--    </select>-->
+</mapper>
