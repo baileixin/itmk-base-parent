@@ -67,6 +67,12 @@ public class SchoolStudentController {
         return ResultUtils.success("删除成功!");
     }
 
+    @DeleteMapping("/batchDelete/{stuIds}")
+    public ResultVo deletes(@PathVariable("stuIds") String stuIds) {
+        schoolStudentService.deleteStus(stuIds);
+        return ResultUtils.success("删除成功!");
+    }
+
     //列表
     @GetMapping("/list")
     public ResultVo getList(StuParm parm) {

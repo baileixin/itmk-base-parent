@@ -74,6 +74,14 @@ public class SchoolStudentServiceImpl extends ServiceImpl<SchoolStudentMapper, S
         }
     }
 
+    @Override
+    public void deleteStus(String studIds) {
+        String[] idArray = studIds.split(",");
+        for (String id : idArray) {
+            Long studId = Long.parseLong(id.trim());
+            deleteStu(studId);
+        }
+    }
 
     @Override
     public SchoolStudent getById(Long studId) {

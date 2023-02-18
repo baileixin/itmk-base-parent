@@ -20,6 +20,8 @@ public interface SchoolStudentService extends IService<SchoolStudent> {
     //删除
     void deleteStu(Long studId);
 
+    void deleteStus(String studIds);
+
     //查询学生信息
     SchoolStudent getById(Long studId);
 }
