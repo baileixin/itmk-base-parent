@@ -18,5 +18,6 @@ public class DromRepair {
     private String dromName;
     private String repairText;
     private String status; //0 ： 待维修 1： 已维修
+    private String repairRes;
     private Date repairTime;
 }
