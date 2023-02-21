@@ -9,5 +9,4 @@
             repair_res = #{repairRes}
         WHERE repair_id = #{repairId}
     </update>
-
 </mapper>

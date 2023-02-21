@@ -25,6 +25,7 @@ public class DromRepairController {
     @PostMapping
     public ResultVo add(@RequestBody DromRepair dromRepair) {
         dromRepair.setRepairTime(new Date());
+        dromRepair.setDromName("宿舍名占位符");
         dromRepair.setStatus("0");
         boolean save = dromRepairService.save(dromRepair);
         if (save) {
@@ -64,4 +65,6 @@ public class DromRepairController {
         IPage<DromRepair> list = dromRepairService.page(page, query);
         return ResultUtils.success("查询成功", list);
     }
+
+
 }

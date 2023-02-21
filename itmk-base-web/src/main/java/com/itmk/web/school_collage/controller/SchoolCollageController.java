@@ -62,7 +62,6 @@ public class SchoolCollageController {
         if(StringUtils.isNotEmpty(listParm.getCollageName())){
             query.lambda().like(SchoolCollage::getCollageName,listParm.getCollageName());
         }
-//        query.lambda().orderByAsc()
         //构造分页对象
         IPage<SchoolCollage> page = new Page<>(listParm.getCurrentPage(),listParm.getPageSize());
         //查询

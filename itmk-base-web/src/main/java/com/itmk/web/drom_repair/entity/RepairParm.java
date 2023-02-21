@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 public class RepairParm {
     private String dromName;
+    private Long roleId;
     private Long currentPage;
     private Long pageSize;
+
 }

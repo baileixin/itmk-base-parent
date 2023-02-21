@@ -31,6 +31,7 @@ public class SchoolStudentController {
     //新增
     @PostMapping
     public ResultVo add(@RequestBody SchoolStudent schoolStudent) {
+        schoolStudent.setRoleId(4L);//        将新增的角色id固定为4，即学生
         schoolStudent.setPassword(DigestUtils.md5DigestAsHex(schoolStudent.getPassword().getBytes()));
         schoolStudentService.addStu(schoolStudent);
         return ResultUtils.success("新增成功!");
